@@ -13,10 +13,6 @@ The project implements a stylized web page with thematic content about space, su
 
 Backend is **not used in the project** - all functionality is implemented on the client side.
 
-## 📷 Screenshots
-
-*(if necessary, you can add project images here)*
-
 ## 💡 Technologies
 
 - HTML5

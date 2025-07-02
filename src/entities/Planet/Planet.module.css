@@ -1,0 +1,277 @@
+.planet {
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 5px #0002;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  overflow: hidden;
+}
+
+.planet:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 40px 10px #fff5;
+}
+
+.planetInner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: planet-spin 6s linear infinite;
+}
+
+@keyframes planet-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.mercuryPattern {
+  width: 60%; height: 60%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 40%, #888 30%, transparent 31%),
+              radial-gradient(circle at 70% 70%, #d1d1d1 20%, transparent 21%);
+  opacity: 0.7;
+}
+
+.venusPattern {
+  width: 90%; height: 90%;
+  border-radius: 50%;
+  background: repeating-linear-gradient(100deg, #fffbe6 0 6px, #e7c97e 6px 12px, transparent 12px 18px);
+  opacity: 0.35;
+}
+
+.earthOcean {
+  width: 60%; height: 40%;
+  border-radius: 50%;
+  background: #1e90ff;
+  opacity: 0.7;
+  position: absolute;
+  left: 10%; top: 30%;
+}
+.earthCloud {
+  width: 50%; height: 18%;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.5;
+  position: absolute;
+  left: 40%; top: 60%;
+}
+
+.earthLand {
+  width: 38%; height: 22%;
+  border-radius: 50%;
+  background: #3cb371;
+  opacity: 0.85;
+  position: absolute;
+  left: 48%; top: 18%;
+  z-index: 2;
+}
+
+.marsPattern {
+  width: 80%; height: 80%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 50%, #a63a1b 40%, transparent 41%),
+              radial-gradient(circle at 70% 80%, #e07b3c 25%, transparent 26%);
+  opacity: 0.7;
+}
+
+.jupiterBands {
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  background: repeating-linear-gradient(90deg, #e3c07b 0 10px, #b48a4a 10px 20px, #fff 20px 24px);
+  opacity: 0.6;
+  position: relative;
+}
+.jupiterBands::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 22%; height: 14%; left: 60%; top: 60%;
+  background: #ff7f2a;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+.jupiterSpot {
+  width: 18%; height: 10%;
+  border-radius: 50%;
+  background: #b45f06;
+  opacity: 0.7;
+  position: absolute;
+  left: 65%; top: 60%;
+  z-index: 2;
+}
+
+.saturnBands {
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  background: repeating-linear-gradient(90deg, #f7e7b6 0 8px, #c2b280 8px 16px, #fff 16px 20px);
+  opacity: 0.5;
+  position: relative;
+}
+.saturnRing {
+  width: 180%; height: 40%;
+  border-radius: 50%;
+  background: repeating-linear-gradient(90deg, #e7d8a1 0 8px, #b8a96a 8px 16px, #fff 16px 20px);
+  opacity: 0.7;
+  position: absolute;
+  left: -40%; top: 30%;
+  z-index: 1;
+}
+
+.saturnBandsExtra {
+  width: 80%; height: 12%;
+  border-radius: 50%;
+  background: #b48a4a;
+  opacity: 0.3;
+  position: absolute;
+  left: 10%; top: 70%;
+  z-index: 2;
+}
+
+.uranusPattern {
+  width: 120%; height: 30%;
+  border-radius: 50%;
+  background: repeating-linear-gradient(90deg, #e0f7fa 0 5px, #b5e3e3 5px 10px, transparent 10px 15px);
+  opacity: 0.6;
+  position: absolute;
+  left: -10%; top: 35%;
+}
+
+.uranusIce {
+  width: 30%; height: 10%;
+  border-radius: 50%;
+  background: #e0f7fa;
+  opacity: 0.5;
+  position: absolute;
+  left: 60%; top: 30%;
+  z-index: 2;
+}
+
+.neptunePattern {
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  background: repeating-linear-gradient(100deg, #4062bb 0 10px, #243a6b 10px 20px, #fff 20px 24px);
+  opacity: 0.5;
+}
+
+.neptuneIce {
+  width: 22%; height: 8%;
+  border-radius: 50%;
+  background: #b5e3e3;
+  opacity: 0.5;
+  position: absolute;
+  left: 50%; top: 60%;
+  z-index: 2;
+}
+
+.pattern1 {
+  position: absolute;
+  width: 60%;
+  height: 30%;
+  left: 20%;
+  top: 25%;
+  border-radius: 50%;
+  opacity: 0.3;
+  background: repeating-linear-gradient(120deg, #fff, #fff 2px, transparent 2px, transparent 8px);
+  pointer-events: none;
+}
+
+.pattern2 {
+  position: absolute;
+  width: 40%;
+  height: 18%;
+  left: 40%;
+  top: 60%;
+  border-radius: 50%;
+  opacity: 0.18;
+  background: repeating-linear-gradient(60deg, #000, #000 1.5px, transparent 1.5px, transparent 7px);
+  pointer-events: none;
+}
+
+.planetShadow {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(90deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.1) 60%, rgba(0,0,0,0.0) 100%);
+  z-index: 2;
+  pointer-events: none;
+  mix-blend-mode: lighten;
+}
+
+.venusCloud {
+  width: 60%; height: 18%;
+  border-radius: 50%;
+  background: #fffbe6;
+  opacity: 0.45;
+  position: absolute;
+  left: 30%; top: 40%;
+  z-index: 2;
+}
+
+.crater {
+  position: absolute;
+  border-radius: 50%;
+  background: #888;
+  opacity: 0.5;
+  z-index: 2;
+}
+
+.crater1 { width: 12%; height: 8%; left: 20%; top: 30%; }
+.crater2 { width: 8%; height: 6%; left: 60%; top: 60%; }
+.crater3 { width: 6%; height: 4%; left: 40%; top: 70%; }
+
+.aurora {
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 60% 30%, #7fffd4cc 0%, #1e90ff44 60%, transparent 100%);
+  opacity: 0.7;
+  animation: aurora-fade 2.2s infinite alternate;
+  z-index: 3;
+}
+@keyframes aurora-fade {
+  0% { opacity: 0.5; filter: blur(2px); }
+  100% { opacity: 0.85; filter: blur(6px); }
+}
+.dustStorm {
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  border-radius: 50%;
+  pointer-events: none;
+  background: repeating-radial-gradient(circle at 60% 60%, #e07b3c44 0 10%, transparent 12% 100%), repeating-radial-gradient(circle at 30% 40%, #b5532a33 0 8%, transparent 10% 100%);
+  opacity: 0.7;
+  animation: dust-spin 1.2s linear infinite;
+  z-index: 3;
+}
+@keyframes dust-spin {
+  0% { transform: rotate(0deg) scale(1); }
+  100% { transform: rotate(360deg) scale(1.05); }
+}
+.storm {
+  animation: storm-spin 0.7s linear infinite !important;
+  filter: drop-shadow(0 0 8px #ff7f2a88);
+}
+@keyframes storm-spin {
+  0% { transform: rotate(0deg) scale(1); }
+  100% { transform: rotate(360deg) scale(1.13); }
+}
+.ringsGlow {
+  box-shadow: 0 0 32px 8px #ffe066cc, 0 0 0 8px #fff2 inset;
+  filter: blur(0.5px) brightness(1.2);
+  animation: ring-glow 1.2s alternate infinite;
+}
+@keyframes ring-glow {
+  0% { filter: blur(0.5px) brightness(1.1); }
+  100% { filter: blur(2px) brightness(1.3); }
+} 

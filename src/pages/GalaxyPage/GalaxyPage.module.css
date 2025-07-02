@@ -1,0 +1,41 @@
+html, body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none;
+}
+
+.page {
+  width: 100vw;
+  min-height: 200vh;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.page::-webkit-scrollbar {
+  display: none;
+}
+
+.hero {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  scroll-snap-align: start;
+  overflow: hidden;
+  background: #000;
+}
+
+.fadeBottom {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 120px;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, #0a0a14 100%);
+  pointer-events: none;
+  z-index: 10;
+} 

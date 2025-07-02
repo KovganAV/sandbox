@@ -1,0 +1,9 @@
+.satellite {
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+ 
+.satellite:hover {
+  box-shadow: 0 0 16px 4px #fff8;
+  transform: scale(1.15);
+} 

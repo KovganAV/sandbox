@@ -1,0 +1,20 @@
+.meteor {
+  transition: opacity 0.2s;
+  pointer-events: none;
+  position: absolute;
+}
+
+.tail {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  filter: blur(1px);
+}
+
+.core {
+  position: absolute;
+  z-index: 2;
+  box-shadow: 0 0 8px 2px #fff8;
+  pointer-events: none;
+} 

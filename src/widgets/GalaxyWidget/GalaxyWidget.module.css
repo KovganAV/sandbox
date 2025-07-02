@@ -1,0 +1,79 @@
+.galaxy {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(ellipse at 50% 60%, #222 60%, #000 100%);
+  z-index: 1;
+}
+
+.sun {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, #ffe066 60%, #ffb700 100%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 60px 20px #ffe06699;
+}
+
+.planet {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle, #6ec6ff 60%, #005fa3 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 20px 5px #6ec6ff99;
+  transition: transform 0.3s;
+}
+
+.planet:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 40px 10px #6ec6ffcc;
+}
+
+.infoBox {
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  transform: translateX(-50%);
+  background: rgba(30, 30, 30, 0.95);
+  color: #fff;
+  padding: 16px 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 32px #0008;
+  z-index: 10;
+  min-width: 180px;
+  text-align: center;
+  font-size: 1.1rem;
+  pointer-events: none;
+}
+
+.sideInfoBox {
+  position: absolute;
+  left: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(30, 30, 30, 0.97);
+  color: #fff;
+  padding: 24px 32px;
+  border-radius: 16px;
+  box-shadow: 0 4px 32px #0008;
+  z-index: 100;
+  min-width: 220px;
+  max-width: 320px;
+  text-align: left;
+  font-size: 1.15rem;
+  pointer-events: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-50%) translateX(-30px); }
+  to { opacity: 1; transform: translateY(-50%) translateX(0); }
+} 

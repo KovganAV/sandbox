@@ -1,4 +1,4 @@
-#Space animation
+## Space animation
 
 This project is a small frontend demo dedicated to the theme of space exploration. The main goal is to learn and practice visual effects, animations and interactive elements using HTML, CSS and JavaScript.
 
